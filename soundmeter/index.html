@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound Meter — Free Android Sound Level Meter (dB)</title>
+<meta name="description" content="Sound Meter is a free Android sound level meter. It measures ambient loudness with the phone microphone and shows an approximate sound pressure level in decibels (30–130 dB). No ads, no account, no data collection.">
+<link rel="canonical" href="https://uzairalimurtaza.github.io/soundmeter/">
+<link rel="icon" href="https://uzairalimurtaza.github.io/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://uzairalimurtaza.github.io/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sound Meter — Free Android Sound Level Meter (dB)">
+<meta property="og:description" content="Free Android decibel meter. Measures ambient loudness with the phone microphone; approximate readings from 30 to 130 dB. No ads, no account, no data collection.">
+<meta property="og:url" content="https://uzairalimurtaza.github.io/soundmeter/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sound Meter",
+  "operatingSystem": "Android",
+  "applicationCategory": "UtilitiesApplication",
+  "softwareVersion": "1.0.1",
+  "author": { "@type": "Organization", "name": "Forgeline" },
+  "url": "https://uzairalimurtaza.github.io/soundmeter/",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "A free Android sound level meter. It measures ambient loudness with the phone microphone and shows an approximate sound pressure level in decibels (dB), on a gauge covering 30 to 130 dB. Audio is processed on-device in real time and never recorded, stored, or uploaded."
+}
+</script>
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = saved || system;
+})();
+</script>
+<style>
+  :root {
+    --bg: #0b1014; --surface: #131a20; --text: #e8edf0; --muted: #9aa7ae;
+    --accent: #4db6ac; --accent-strong: #26a69a; --border: #22303a;
+  }
+  :root[data-theme="light"] {
+    --bg: #fafcfb; --surface: #ffffff; --text: #16211f; --muted: #5c6b68;
+    --accent: #00897b; --accent-strong: #00695c; --border: #dbe5e2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px; line-height: 1.65;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 0 20px 48px; }
+  header.site {
+    max-width: 680px; margin: 0 auto; padding: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  header.site a.home { color: var(--muted); font-size: 0.9rem; }
+  .theme-toggle {
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
+  }
+  .theme-toggle:focus-visible, a:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px;
+  }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 24px 0 8px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 10px; color: var(--accent-strong); }
+  :root[data-theme="dark"] h2 { color: var(--accent); }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent-strong); }
+  .muted { color: var(--muted); font-size: 0.9em; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  dl.facts {
+    display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px; margin: 24px 0 0;
+  }
+  dl.facts dt { color: var(--muted); }
+  dl.facts dd { margin: 0; overflow-wrap: anywhere; }
+  footer {
+    max-width: 680px; margin: 0 auto; padding: 24px 20px 40px;
+    border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;
+    display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="home" href="../">← uzairalimurtaza.github.io</a>
+  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+</header>
+<main>
+<h1>Sound Meter</h1>
+<p class="muted">A free sound level meter for Android, by Forgeline.</p>
+
+<p>Sound Meter is a free Android app that measures ambient loudness with the phone's
+microphone and shows an approximate <strong>sound pressure level in decibels (dB)</strong>.
+It is a decibel meter for everyday use: checking how loud a room, a street, an office,
+or an event is, and comparing one situation with another. It works fully offline, has
+no ads in the current version, and requires no account.</p>
+
+<dl class="facts">
+  <dt>Platform</dt><dd>Android</dd>
+  <dt>Price</dt><dd>Free; no ads in the current version</dd>
+  <dt>Current version</dt><dd>1.0.1</dd>
+  <dt>Package name</dt><dd>com.uzairalimurtaza.soundmeter</dd>
+  <dt>Developer</dt><dd>Forgeline</dd>
+  <dt>Get it</dt><dd><a href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">Sound Meter on Google Play</a></dd>
+  <dt>Privacy</dt><dd><a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Privacy policy</a> — no data collection</dd>
+</dl>
+
+<h2>What it measures</h2>
+<p>The app reads the microphone signal, computes its level in real time, and displays it
+as an approximate sound pressure level in dB. The gauge covers <strong>30 to 130 dB</strong>;
+internally, readings are clamped to the range 20–130 dB. The display updates live while
+the app is open and measuring; the meter runs only while you are using it.</p>
+
+<h2>Features</h2>
+<ul>
+  <li><strong>Live arc gauge</strong> with color zones: green below 70 dB, amber from
+      70 to 85 dB, red at 85 dB and above. A peak-hold marker shows the highest recent
+      reading.</li>
+  <li><strong>Rolling trend chart</strong> of the level over the recent past.</li>
+  <li><strong>Session statistics</strong>: minimum, maximum, and average level for the
+      current measuring session.</li>
+  <li><strong>A, C, and Z weighting toggles.</strong> These are implemented as a
+      documented broadband approximation using fixed offsets, not as per-frequency
+      IEC&nbsp;61672 filters. They shift the reading in the direction the standard
+      weightings would for typical broadband noise, but they are not filter-accurate.</li>
+  <li><strong>Fast and Slow time response.</strong> Genuine exponential time-averaging
+      with the conventional sound-level-meter time constants: 125&nbsp;ms (Fast) and
+      1&nbsp;s (Slow).</li>
+  <li><strong>Manual calibration slider</strong>, adjustable by ±15 dB, so readings can
+      be aligned against a known reference level.</li>
+  <li><strong>Reference guide</strong> of 19 everyday sounds (for example a quiet room,
+      normal conversation, city traffic) with their typical levels, for context.</li>
+  <li><strong>Hearing-safety advisory</strong> shown when the level is above 85 dB,
+      based on WHO and NIOSH guidance on noise exposure.</li>
+  <li><strong>Dark mode</strong>, and full offline operation. No account, and no ads in
+      the current version.</li>
+</ul>
+
+<h2>Accuracy</h2>
+<p>Phone microphones differ by several dB between models, and none of them is a
+laboratory instrument. Readings from Sound Meter are <strong>estimates</strong>, useful
+for screening and for comparing one situation with another. The app is <strong>not a
+certified measurement instrument</strong> and does not meet IEC&nbsp;61672 Type&nbsp;2
+requirements. Calibrating the app against a known reference — for example a dedicated
+sound level meter reading taken in the same place — improves the consistency of its
+readings on your particular device.</p>
+
+<h2>Privacy</h2>
+<p>Audio is processed on the device, in real time, for one purpose: computing the
+current sound level. It is <strong>never recorded, stored, or uploaded</strong>. The app
+collects no data of any kind — no account, no analytics, no tracking. The full policy is
+published at
+<a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">uzairalimurtaza.github.io/soundmeter-privacy</a>.</p>
+
+<h2>Get the app</h2>
+<p>Sound Meter is available on Google Play:
+<a href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter</a>.</p>
+<p>Questions about the app can be sent to
+<a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a>.</p>
+</main>
+<footer>
+  <span>© 2026 Uzair Ali Murtaza · Lahore, Pakistan</span>
+  <a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Privacy policy</a>
+  <a href="../">Home</a>
+</footer>
+<script>
+(function () {
+  var btn = document.querySelector(".theme-toggle");
+  btn.addEventListener("click", function () {
+    var next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+})();
+</script>
+</body>
+</html>
