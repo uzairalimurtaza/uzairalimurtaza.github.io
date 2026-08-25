@@ -34,65 +34,25 @@
   document.documentElement.dataset.theme = saved || system;
 })();
 </script>
-<style>
-  :root {
-    --bg: #0b1014; --surface: #131a20; --text: #e8edf0; --muted: #9aa7ae;
-    --accent: #4db6ac; --accent-strong: #26a69a; --border: #22303a;
-  }
-  :root[data-theme="light"] {
-    --bg: #fafcfb; --surface: #ffffff; --text: #16211f; --muted: #5c6b68;
-    --accent: #00897b; --accent-strong: #00695c; --border: #dbe5e2;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px; line-height: 1.65;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 0 20px 48px; }
-  header.site {
-    max-width: 680px; margin: 0 auto; padding: 20px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  header.site a.home { color: var(--muted); font-size: 0.9rem; }
-  .theme-toggle {
-    background: var(--surface); color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
-  }
-  .theme-toggle:focus-visible, a:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px;
-  }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin: 24px 0 8px; }
-  h2 { font-size: 1.15rem; margin: 36px 0 10px; color: var(--accent-strong); }
-  :root[data-theme="dark"] h2 { color: var(--accent); }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--accent-strong); }
-  .muted { color: var(--muted); font-size: 0.9em; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 8px; }
-  dl.facts {
-    display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px; margin: 24px 0 0;
-  }
-  dl.facts dt { color: var(--muted); }
-  dl.facts dd { margin: 0; overflow-wrap: anywhere; }
-  footer {
-    max-width: 680px; margin: 0 auto; padding: 24px 20px 40px;
-    border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;
-    display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
-  }
-  footer a { color: var(--muted); }
-</style>
+<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="site">
-  <a class="home" href="../">← uzairalimurtaza.github.io</a>
-  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+
+<header class="mast">
+  <div class="doc">
+    <a class="wordmark" href="../">Forgeline<small>Software workshop</small></a>
+    <div class="mast-right">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
 </header>
-<main>
-<h1>Sound Meter</h1>
-<p class="muted">A free sound level meter for Android, by Forgeline.</p>
+
+<main class="doc">
+<div class="doc-title">
+  <p class="kicker">No. 01 · Measurement utility · Specification sheet</p>
+  <h1>Sound Meter <span class="accent-sm">— Decibel dB Meter</span></h1>
+  <p class="muted">A free sound level meter for Android, by Forgeline.</p>
+</div>
 
 <p>Sound Meter is a free Android app that measures ambient loudness with the phone's
 microphone and shows an approximate <strong>sound pressure level in decibels (dB)</strong>.
@@ -109,6 +69,15 @@ no ads in the current version, and requires no account.</p>
   <dt>Get it</dt><dd><a href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">Sound Meter on Google Play</a></dd>
   <dt>Privacy</dt><dd><a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Privacy policy</a> — no data collection</dd>
 </dl>
+
+<h2>Screens</h2>
+<div class="shots" role="group" aria-label="Sound Meter screenshots">
+  <img src="../assets/sm-01.webp" width="640" height="1387" alt="Sound Meter's live decibel gauge reading 71 dB, with colour-coded safety zones and a rolling level chart">
+  <img src="../assets/sm-03.webp" width="640" height="1387" loading="lazy" decoding="async" alt="A, C and Z weighting toggles and Fast/Slow response controls above a 66 dB reading">
+  <img src="../assets/sm-04.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Peak-hold marker at 83 dB with live session minimum, average and maximum">
+  <img src="../assets/sm-06.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Reference guide listing 19 everyday sounds and their typical levels">
+</div>
+<img class="wide-shot" src="../assets/sm-tablet.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Sound Meter running on a 10-inch tablet in landscape, with the gauge and trend chart side by side">
 
 <h2>What it measures</h2>
 <p>The app reads the microphone signal, computes its level in real time, and displays it
@@ -163,11 +132,17 @@ published at
 <p>Questions about the app can be sent to
 <a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a>.</p>
 </main>
-<footer>
-  <span>© 2026 Uzair Ali Murtaza · Lahore, Pakistan</span>
-  <a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Privacy policy</a>
-  <a href="../">Home</a>
+
+<footer class="site">
+  <div class="doc">
+    <span>© 2026 Forgeline · Uzair Ali Murtaza · Lahore, Pakistan</span>
+    <span>
+      <a href="../soundmeter-privacy/">Privacy policy</a> ·
+      <a href="../">Home</a>
+    </span>
+  </div>
 </footer>
+
 <script>
 (function () {
   var btn = document.querySelector(".theme-toggle");

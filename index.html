@@ -3,16 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Uzair Ali Murtaza — Independent Android Developer</title>
-<meta name="description" content="Independent Android developer building small, honest, ad-free-first utilities out of Lahore, Pakistan. Maker of Sound Meter.">
+<title>Forgeline — Honest Android Apps by Uzair Ali Murtaza</title>
+<meta name="description" content="Forgeline is a one-person software workshop in Lahore, Pakistan, run by Uzair Ali Murtaza. Small, honest Android apps on Google Play: Sound Meter and Tasbih Counter. Free, offline, ad-free, no data collected.">
 <link rel="canonical" href="https://uzairalimurtaza.github.io/">
 <link rel="icon" href="https://uzairalimurtaza.github.io/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="https://uzairalimurtaza.github.io/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Uzair Ali Murtaza — Independent Android Developer">
-<meta property="og:description" content="Small, honest, ad-free-first Android utilities. Maker of Sound Meter.">
+<meta property="og:title" content="Forgeline — Honest Android Apps by Uzair Ali Murtaza">
+<meta property="og:description" content="Small, honest Android apps from a one-person workshop in Lahore. Free, offline, ad-free, no data collected.">
 <meta property="og:url" content="https://uzairalimurtaza.github.io/">
 <meta property="og:image" content="https://uzairalimurtaza.github.io/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Forgeline",
+  "url": "https://uzairalimurtaza.github.io/",
+  "email": "uzairalimurtaza@gmail.com",
+  "founder": { "@type": "Person", "name": "Uzair Ali Murtaza" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+  "description": "A one-person software workshop making small, honest Android apps. Publisher of Sound Meter and Tasbih Counter on Google Play."
+}
+</script>
 <script>
 (function () {
   var saved = localStorage.getItem("theme");
@@ -20,114 +32,194 @@
   document.documentElement.dataset.theme = saved || system;
 })();
 </script>
-<style>
-  :root {
-    --bg: #0b1014; --surface: #131a20; --text: #e8edf0; --muted: #9aa7ae;
-    --accent: #4db6ac; --accent-strong: #26a69a; --border: #22303a;
-  }
-  :root[data-theme="light"] {
-    --bg: #fafcfb; --surface: #ffffff; --text: #16211f; --muted: #5c6b68;
-    --accent: #00897b; --accent-strong: #00695c; --border: #dbe5e2;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px; line-height: 1.65;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 0 20px 48px; }
-  header.site {
-    max-width: 680px; margin: 0 auto; padding: 20px;
-    display: flex; justify-content: flex-end;
-  }
-  .theme-toggle {
-    background: var(--surface); color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
-  }
-  .theme-toggle:focus-visible, a:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px;
-  }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 24px 0 8px; }
-  .tagline { color: var(--muted); margin: 0 0 40px; font-size: 1.05rem; }
-  h2 {
-    font-size: 0.85rem; letter-spacing: 0.09em; text-transform: uppercase;
-    color: var(--accent); margin: 44px 0 16px;
-  }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--accent-strong); }
-  .app-card {
-    display: flex; gap: 16px; align-items: flex-start;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px;
-  }
-  .app-card img { width: 72px; height: 72px; border-radius: 16px; flex-shrink: 0; }
-  .app-card h3 { margin: 0 0 4px; font-size: 1.1rem; }
-  .app-card p { margin: 0 0 10px; color: var(--muted); font-size: 0.95rem; }
-  .badge {
-    display: inline-block; font-size: 0.78rem; padding: 3px 10px; border-radius: 999px;
-    border: 1px solid var(--border); color: var(--muted); margin-right: 12px;
-  }
-  .principle { margin: 0 0 18px; }
-  .principle strong { color: var(--text); }
-  ul.contact { list-style: none; padding: 0; margin: 0; }
-  ul.contact li { margin-bottom: 8px; }
-  footer {
-    max-width: 680px; margin: 0 auto; padding: 24px 20px 40px;
-    border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;
-    display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
-  }
-  footer a { color: var(--muted); }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site">
-  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="wordmark" href="/">Forgeline<small>Software workshop</small></a>
+    <div class="mast-right">
+      <span class="mast-loc">Lahore&nbsp;·&nbsp;PK</span>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
 </header>
+
 <main>
-  <h1>Uzair Ali Murtaza</h1>
-  <p class="tagline">Independent Android developer. Building small, honest, ad-free-first
-  utilities out of Lahore, Pakistan.</p>
-
-  <h2>What I'm working on</h2>
-  <div class="app-card">
-    <img src="sound-meter-icon.png" alt="Sound Meter app icon — white sound wave on teal" width="72" height="72">
-    <div>
-      <h3>Sound Meter — Decibel dB Meter</h3>
-      <p>Decibel meter, measures instantly. 100% free, no ads. A/C/Z + peak hold.</p>
-      <span class="badge">On Google Play</span>
-      <a href="soundmeter/">About Sound Meter</a> ·
-      <a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Privacy policy</a>
+  <section class="hero wrap">
+    <p class="kicker">Product catalogue · 2026 edition</p>
+    <h1>Software you can take at its word.</h1>
+    <p class="lede">Forgeline is a one-person workshop run by <strong>Uzair Ali Murtaza</strong> in
+    Lahore, Pakistan. It makes small Android apps the way good instruments are made:
+    carefully built, plainly specified, honest about their limits — and free of everything
+    that usually comes attached.</p>
+    <div class="facts-strip" role="list" aria-label="Portfolio at a glance">
+      <div role="listitem"><b>2</b><span>Apps on Google&nbsp;Play</span></div>
+      <div role="listitem"><b>0</b><span>Ads shown</span></div>
+      <div role="listitem"><b>0</b><span>Data collected</span></div>
+      <div role="listitem"><b>0</b><span>Accounts required</span></div>
     </div>
-  </div>
+  </section>
 
-  <div class="app-card" style="margin-top:16px">
-    <img src="tasbih-icon.png" alt="Tasbih Counter app icon — gold misbaha bead on deep navy" style="border-radius:16px" width="72" height="72">
-    <div>
-      <h3>Tasbih Counter — Digital Dhikr</h3>
-      <p>Digital tasbih &amp; dhikr counter. 100% free, offline, no ads. Streaks + daily reminders.</p>
-      <span class="badge">Coming soon to Google Play</span>
-      <a href="https://uzairalimurtaza.github.io/tasbih-privacy/">Privacy policy</a>
+  <section class="app wrap" id="sound-meter" aria-labelledby="sm-title">
+    <p class="kicker">No. 01 · Measurement utility · Live since 18 Aug 2026</p>
+    <hr class="rule-strong">
+    <div class="app-head">
+      <img src="assets/sound-meter-icon.webp" alt="Sound Meter app icon" width="192" height="192">
+      <div>
+        <h2 id="sm-title">Sound Meter <span class="accent-sm">— Decibel dB Meter</span></h2>
+        <p class="sub">A free, offline sound level meter for Android.</p>
+      </div>
     </div>
-  </div>
+    <p class="claim">Open it and it measures — live decibels on a colour-coded gauge, no
+    splash screens, no sign-up, and never an ad interrupting a reading. Built for checking
+    how loud a room, a street, or a night's noise actually is.</p>
 
-  <h2>Principles</h2>
-  <p class="principle"><strong>Ad-free-first.</strong> I ship v1.0 of every app 100% ad-free.
-  Ads come later, and only as an opt-in.</p>
-  <p class="principle"><strong>Honest by default.</strong> Utilities that estimate something
-  (like sound level) should say so plainly, not pretend to be certified instruments.</p>
-  <p class="principle"><strong>Local by default.</strong> Data stays on the device unless you
-  explicitly share it. No trackers, no accounts.</p>
+    <div class="shots" role="group" aria-label="Sound Meter screenshots">
+      <img src="assets/sm-01.webp" width="640" height="1387" alt="Sound Meter's live decibel gauge reading 71 dB, with colour-coded safety zones and a rolling level chart">
+      <img src="assets/sm-02.webp" width="640" height="1387" alt="The gauge reading 35 dB in the green safe zone, shown in the light theme">
+      <img src="assets/sm-03.webp" width="640" height="1387" loading="lazy" decoding="async" alt="A, C and Z weighting toggles and Fast/Slow response controls above a 66 dB reading">
+      <img src="assets/sm-04.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Peak-hold marker at 83 dB with live session minimum, average and maximum">
+      <img src="assets/sm-05.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Settings screen with the ±15 dB microphone calibration slider and theme options">
+      <img src="assets/sm-06.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Reference guide listing 19 everyday sounds and their typical levels, from breathing at 10 dB upward">
+    </div>
 
-  <h2>Contact</h2>
-  <ul class="contact">
-    <li>Email: <a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a></li>
-    <li>GitHub: <a href="https://github.com/uzairalimurtaza">github.com/uzairalimurtaza</a></li>
-  </ul>
+    <div class="spec">
+      <div class="spec-grid">
+        <dl>
+          <div class="row"><dt>Display range</dt><dd>30 – 130 dB, colour-zoned arc gauge</dd></div>
+          <div class="row"><dt>Weighting</dt><dd>A / C / Z — broadband&nbsp;approximation*</dd></div>
+          <div class="row"><dt>Time response</dt><dd>Fast 125 ms · Slow 1 s</dd></div>
+          <div class="row"><dt>Peak</dt><dd>Peak-hold marker</dd></div>
+          <div class="row"><dt>Session stats</dt><dd>Minimum · maximum · average</dd></div>
+          <div class="row"><dt>Calibration</dt><dd>Manual slider, ±15 dB</dd></div>
+        </dl>
+        <dl>
+          <div class="row"><dt>Reference</dt><dd>19-sound everyday level guide</dd></div>
+          <div class="row"><dt>Price</dt><dd>Free · no ads · no in-app purchases</dd></div>
+          <div class="row"><dt>Data collected</dt><dd>None — works fully offline</dd></div>
+          <div class="row"><dt>Version</dt><dd>1.0.1 · Android</dd></div>
+          <div class="row"><dt>Package</dt><dd>com.uzairalimurtaza.soundmeter</dd></div>
+          <div class="row"><dt>Released</dt><dd>18 August 2026</dd></div>
+        </dl>
+      </div>
+      <p class="footnote"><span class="mark">*</span><span>Sound Meter is a screening tool.
+      Phone microphones vary by several decibels between models, so readings are estimates —
+      it is not, and does not claim to be, a certified IEC&nbsp;61672 Type&nbsp;1 or
+      Type&nbsp;2 instrument.</span></p>
+    </div>
+
+    <div class="app-actions">
+      <a class="btn btn-solid" href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">Get it on Google Play</a>
+      <a class="btn btn-ghost" href="soundmeter/">Full specification</a>
+      <a class="quiet" href="soundmeter-privacy/">Privacy policy</a>
+    </div>
+  </section>
+
+  <section class="app wrap" id="tasbih" aria-labelledby="tb-title">
+    <p class="kicker">No. 02 · Devotional counter · Live since 25 Aug 2026</p>
+    <hr class="rule-strong">
+    <div class="app-head">
+      <img src="assets/tasbih-icon.webp" alt="Tasbih Counter app icon" width="192" height="192">
+      <div>
+        <h2 id="tb-title">Tasbih Counter <span class="accent-tb">— Dhikr &amp; Zikr</span></h2>
+        <p class="sub">A digital misbaha for Android, made with reverence.</p>
+      </div>
+    </div>
+    <p class="claim">A 33-bead ring that fills as you count, with gold separators at 11 and
+    22 — the rhythm of a real misbaha, on a screen that stays quiet. Count by tapping
+    anywhere, or with the volume buttons: phone in pocket, eyes free.</p>
+
+    <div class="shots" role="group" aria-label="Tasbih Counter screenshots">
+      <img src="assets/tb-01.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Tasbih Counter's 33-bead ring at count 22 in the true-black AMOLED theme, with SubhanAllah in Arabic calligraphy above">
+      <img src="assets/tb-02.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Counter screen highlighting volume-button counting — count with the phone in your pocket">
+      <img src="assets/tb-03.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Settings screen with five theme cards: Midnight, AMOLED, Emerald, Gold and Ivory">
+      <img src="assets/tb-04.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Dhikr picker listing seven presets in Amiri Arabic calligraphy, with an add-custom-dhikr option">
+      <img src="assets/tb-05.webp" width="640" height="1387" loading="lazy" decoding="async" alt="Stats screen showing streak, lifetime and today counts above a 30-day chart">
+      <img src="assets/tb-06.webp" width="640" height="1387" loading="lazy" decoding="async" alt="The bead ring in the warm Ivory theme, with gold separators and lap dots">
+    </div>
+
+    <div class="spec">
+      <div class="spec-grid">
+        <dl>
+          <div class="row"><dt>Form</dt><dd>33-bead ring · gold separators at 11 &amp; 22 · lap dots</dd></div>
+          <div class="row"><dt>Counting</dt><dd>Tap anywhere · volume buttons</dd></div>
+          <div class="row"><dt>Dhikr</dt><dd>7 presets + your own custom dhikr</dd></div>
+          <div class="row"><dt>Script</dt><dd>Amiri Arabic calligraphy</dd></div>
+          <div class="row"><dt>Habit</dt><dd>Daily streak · 30-day stats</dd></div>
+          <div class="row"><dt>Themes</dt><dd>5, including true-black AMOLED</dd></div>
+        </dl>
+        <dl>
+          <div class="row"><dt>Reminder</dt><dd>Optional daily reminder, off by default</dd></div>
+          <div class="row"><dt>Price</dt><dd>Free · no ads · no in-app purchases</dd></div>
+          <div class="row"><dt>Data collected</dt><dd>None — works fully offline</dd></div>
+          <div class="row"><dt>Version</dt><dd>1.0.0 · Android</dd></div>
+          <div class="row"><dt>Package</dt><dd>com.uzairalimurtaza.tasbih</dd></div>
+          <div class="row"><dt>Released</dt><dd>25 August 2026</dd></div>
+        </dl>
+      </div>
+      <p class="footnote"><span class="mark">†</span><span>A devotional object, kept plain on
+      purpose. Your counts, streaks and custom dhikr are stored on your phone and nowhere
+      else — no account, no cloud, nothing watching.</span></p>
+    </div>
+
+    <div class="app-actions">
+      <a class="btn btn-solid" href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.tasbih">Get it on Google Play</a>
+      <a class="btn btn-ghost" href="tasbih/">Full specification</a>
+      <a class="quiet" href="tasbih-privacy/">Privacy policy</a>
+    </div>
+  </section>
+
+  <section class="app wrap" id="principles" aria-labelledby="pr-title">
+    <p class="kicker">Working principles</p>
+    <hr class="rule-strong">
+    <h2 id="pr-title" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Working principles</h2>
+    <div class="clauses">
+      <div class="clause">
+        <span class="num">Clause 01</span>
+        <h3>Ad-free first.</h3>
+        <p>Every app ships version 1.0 completely ad-free. If ads ever come, they come
+        later, disclosed in advance — and never between you and the thing you opened
+        the app to do.</p>
+      </div>
+      <div class="clause">
+        <span class="num">Clause 02</span>
+        <h3>Honest by default.</h3>
+        <p>A tool that estimates says “estimate.” Specifications state their limits in
+        plain words, and no feature is claimed that doesn’t exist.</p>
+      </div>
+      <div class="clause">
+        <span class="num">Clause 03</span>
+        <h3>Local by default.</h3>
+        <p>Data stays on the device. No accounts, no analytics, no trackers — nothing
+        can leak, because nothing is collected.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="app wrap maker" id="contact" aria-labelledby="mk-title">
+    <p class="kicker">The workshop</p>
+    <hr class="rule-strong">
+    <h2 id="mk-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">About and contact</h2>
+    <p><strong>Forgeline is Uzair Ali Murtaza</strong> — one developer in Lahore, Pakistan.
+    Every app here is designed, built, tested and shipped by one person, which is exactly
+    why each one stays small enough to be done properly.</p>
+    <p class="contact-line">Email · <a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a><br>
+    GitHub · <a href="https://github.com/uzairalimurtaza">github.com/uzairalimurtaza</a></p>
+  </section>
 </main>
-<footer>
-  <span>© 2026 Uzair Ali Murtaza · Lahore, Pakistan</span>
-  <a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">Sound Meter privacy</a>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Forgeline · Uzair Ali Murtaza · Lahore, Pakistan</span>
+    <span>
+      <a href="soundmeter-privacy/">Sound Meter privacy</a> ·
+      <a href="tasbih-privacy/">Tasbih Counter privacy</a>
+    </span>
+  </div>
 </footer>
+
 <script>
 (function () {
   var btn = document.querySelector(".theme-toggle");

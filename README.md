@@ -1,13 +1,18 @@
 # uzairalimurtaza.github.io
 
-Personal developer site for Uzair Ali Murtaza — independent Android developer, Lahore, Pakistan.
+Forgeline studio site — the developer portfolio of Uzair Ali Murtaza (Forgeline on Google Play), Lahore, Pakistan. "Spec sheet" design: shared `styles.css`, WebP assets in `assets/`.
 
 Hosts:
-- Landing page (bio, app cards, contact)
-- [Sound Meter privacy policy](https://uzairalimurtaza.github.io/soundmeter-privacy/)
-- [`app-ads.txt`](https://uzairalimurtaza.github.io/app-ads.txt) (AdMob publisher verification — required since Jan 2025)
+- Landing page (`/` — studio portfolio: Sound Meter + Tasbih Counter, principles, contact)
+- Product pages: [`/soundmeter/`](https://uzairalimurtaza.github.io/soundmeter/) and [`/tasbih/`](https://uzairalimurtaza.github.io/tasbih/) (Ask Play reads these)
+- Privacy policies: [`/soundmeter-privacy/`](https://uzairalimurtaza.github.io/soundmeter-privacy/) and [`/tasbih-privacy/`](https://uzairalimurtaza.github.io/tasbih-privacy/) — **legal text is declared in the Play listings; edit only via the source policies in the app folders**
+- [`app-ads.txt`](https://uzairalimurtaza.github.io/app-ads.txt) (AdMob publisher verification — contents must stay byte-exact)
 
-Plain HTML + CSS. No frameworks, no build step, no analytics, no trackers, no cookies.
+⚠️ The four paths above plus `app-ads.txt` are referenced from live Play listings / AdMob review. Never move, rename or delete them.
+
+Plain HTML + CSS. No frameworks, no build step, no analytics, no trackers, no cookies, no external fonts/CDNs.
+
+Preview locally: `python3 -m http.server 8734` in this folder → http://localhost:8734
 
 ---
 

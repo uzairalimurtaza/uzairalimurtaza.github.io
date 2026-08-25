@@ -15,56 +15,18 @@
   document.documentElement.dataset.theme = saved || system;
 })();
 </script>
-<style>
-  :root {
-    --bg: #0b1014; --surface: #131a20; --text: #e8edf0; --muted: #9aa7ae;
-    --accent: #4db6ac; --accent-strong: #26a69a; --border: #22303a;
-  }
-  :root[data-theme="light"] {
-    --bg: #fafcfb; --surface: #ffffff; --text: #16211f; --muted: #5c6b68;
-    --accent: #00897b; --accent-strong: #00695c; --border: #dbe5e2;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px; line-height: 1.65;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 0 20px 48px; }
-  header.site {
-    max-width: 680px; margin: 0 auto; padding: 20px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  header.site a.home { color: var(--muted); font-size: 0.9rem; }
-  .theme-toggle {
-    background: var(--surface); color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
-  }
-  .theme-toggle:focus-visible, a:focus-visible {
-    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px;
-  }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin: 24px 0 8px; }
-  h2 { font-size: 1.15rem; margin: 36px 0 10px; color: var(--accent-strong); }
-  :root[data-theme="dark"] h2 { color: var(--accent); }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--accent-strong); }
-  .muted { color: var(--muted); font-size: 0.9em; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 8px; }
-  footer {
-    max-width: 680px; margin: 0 auto; padding: 24px 20px 40px;
-    border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem;
-    display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
-  }
-  footer a { color: var(--muted); }
-</style>
+<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="site">
-  <a class="home" href="https://uzairalimurtaza.github.io/">← uzairalimurtaza.github.io</a>
-  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+<header class="mast">
+  <div class="doc">
+    <a class="wordmark" href="../">Forgeline<small>Software workshop</small></a>
+    <div class="mast-right">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
 </header>
-<main>
+<main class="doc">
 <h1>Privacy Policy — Tasbih Counter</h1>
 <p class="muted">Last updated: 28 July 2026</p>
 
@@ -132,9 +94,11 @@ a new "Last updated" date.</p>
 <h2>9. Contact</h2>
 <p>Questions? Email <a href="mailto:uamurtaza.apps@gmail.com">uamurtaza.apps@gmail.com</a>.</p>
 </main>
-<footer>
-  <span>© 2026 Uzair Ali Murtaza · Lahore, Pakistan</span>
-  <a href="https://uzairalimurtaza.github.io/">Home</a>
+<footer class="site">
+  <div class="doc">
+    <span>&#169; 2026 Forgeline &#183; Uzair Ali Murtaza &#183; Lahore, Pakistan</span>
+    <a href="../">Home</a>
+  </div>
 </footer>
 <script>
 (function () {
