@@ -1,0 +1,109 @@
+<!-- Candela privacy policy — this file is the source of truth. URL is compiled into the app: /candela/privacy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candela — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Candela light meter Android app. No ads, no account, no data collection; light readings are processed on your device.">
+<link rel="canonical" href="https://uzairalimurtaza.github.io/candela/privacy/">
+<link rel="icon" href="https://uzairalimurtaza.github.io/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://uzairalimurtaza.github.io/apple-touch-icon.png">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = saved || system;
+})();
+</script>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<header class="mast">
+  <div class="doc">
+    <a class="wordmark" href="../../">Forgeline<small>Software workshop</small></a>
+    <div class="mast-right">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
+</header>
+<main class="doc">
+<h1>Privacy Policy — Candela</h1>
+<p class="muted">Last updated: 15 September 2026</p>
+
+<p>This Privacy Policy explains how the <strong>Candela</strong> Android light meter
+(package <code>com.uzairalimurtaza.candela</code>, "the app", "we"), published under the
+<strong>Forgeline</strong> developer brand, handles information. By using the app you agree
+to this policy.</p>
+
+<h2>1. The light sensor &mdash; readings stay on your phone</h2>
+<p>Candela reads your phone's <strong>ambient light sensor</strong> to show how much light is
+falling on it, in lux, foot-candles or EV. The sensor needs no permission. Readings are
+processed <strong>on your device, in the moment</strong>. We do <strong>not</strong> store
+them on any server, and we do <strong>not</strong> upload or share them.</p>
+
+<h2>2. We do not collect personal data</h2>
+<p>The app has no account, no sign-up and no login. We do not ask for your name, email,
+phone number, contacts, photos, location, camera or microphone. Your settings (units,
+response time, calibration offset, exposure preset, theme and language) are stored only
+on your device.</p>
+
+<h2>3. Advertising &mdash; none in this version</h2>
+<p>This version of Candela shows <strong>no ads</strong> and requests none. The advertising
+and in-app purchase libraries it is built with are inactive, and the app collects
+<strong>no personal data at all</strong>.</p>
+<p>If a future update introduces advertising (Google AdMob), this policy will be updated
+<strong>first</strong>, with full disclosure of the data involved, and users in the EEA/UK
+will be asked for consent before any ads are served.</p>
+
+<h2>4. Permissions</h2>
+<ul>
+  <li><strong>No runtime permissions.</strong> The light sensor needs none, and the app never
+      asks for camera, microphone, location, contacts or storage access.</li>
+  <li><strong>Internet / network state</strong> &mdash; declared by the libraries the app is
+      built with and not used by this version; the app itself makes no network requests. The
+      privacy policy link in Settings opens in your device's browser, outside the app.</li>
+</ul>
+
+<h2>5. Ratings</h2>
+<p>After a few uses the app may ask Google Play to show its standard rating card. Anything
+you enter there goes to Google Play under Google's privacy policy; the app never sees it.</p>
+
+<h2>6. Children</h2>
+<p>The app is rated for general audiences and does not knowingly collect personal data from
+children. This version shows no advertising.</p>
+
+<h2>7. Data security &amp; retention</h2>
+<p>Because we don't collect or store your data on any server, there is nothing for us to
+breach, sell or retain. On-device settings remain until you clear the app's data or
+uninstall it.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We may update this policy as the app evolves. Material changes will be reflected here with
+a new "Last updated" date.</p>
+
+<h2>9. Contact</h2>
+<p>Questions? Email <a href="mailto:uamurtaza.apps@gmail.com">uamurtaza.apps@gmail.com</a>.</p>
+
+<p class="muted">Candela is a measurement aid. Phone light sensors are uncalibrated and many are
+capped by the manufacturer; readings are estimates and should not be relied upon for
+professional, safety or legal purposes.</p>
+</main>
+<footer class="site">
+  <div class="doc">
+    <span>&#169; 2026 Forgeline &#183; Uzair Ali Murtaza &#183; Lahore, Pakistan</span>
+    <a href="../../">Home</a>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.querySelector(".theme-toggle");
+  btn.addEventListener("click", function () {
+    var next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+})();
+</script>
+</body>
+</html>
