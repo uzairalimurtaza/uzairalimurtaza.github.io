@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeaderHermit — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the HeaderHermit browser extension. No data collection, no network requests of its own, no account; your profiles stay on your device.">
+<link rel="canonical" href="https://uzairalimurtaza.github.io/headerhermit/privacy/">
+<link rel="icon" href="https://uzairalimurtaza.github.io/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="https://uzairalimurtaza.github.io/apple-touch-icon.png">
+<script>
+(function () {
+  var saved = localStorage.getItem("theme");
+  var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = saved || system;
+})();
+</script>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<header class="mast">
+  <div class="doc">
+    <a class="wordmark" href="../../">Forgeline<small>Software workshop</small></a>
+    <div class="mast-right">
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
+</header>
+<main class="doc">
+<h1>Privacy Policy — HeaderHermit</h1>
+<p class="muted">Last updated: 27 September 2026</p>
+
+<p>This Privacy Policy explains how <strong>HeaderHermit</strong> ("the extension", "we"), a browser extension for
+Google Chrome and other Chromium browsers published under the <strong>Forgeline</strong> developer brand, handles
+information. In short: <strong>the extension collects nothing, sends nothing, and makes no network requests of its
+own.</strong></p>
+
+<h2>1. We do not collect any data</h2>
+<p>HeaderHermit has no account, no sign-up, no analytics, no crash reporting, no advertising and no remote
+configuration. It does not collect, transmit, sell or share any personal data, browsing history, website content or
+usage information. We never receive any of your data, because the extension never sends it anywhere.</p>
+
+<h2>2. What stays on your device</h2>
+<ul>
+  <li><strong>Your profiles and rules</strong> (the headers you set, your mock responses and their settings) are saved
+      in your browser's extension storage (<code>chrome.storage.local</code>) on this device. They are not synced to
+      your Google account.</li>
+  <li><strong>The result of the last rule update</strong> (for example, how many rules are active, or an error to show
+      you) is kept in memory (<code>chrome.storage.session</code>) and cleared when the browser closes.</li>
+  <li><strong>The sites you allowed</strong> are kept by the browser itself, as for any extension permission.</li>
+</ul>
+<p>Removing the extension deletes all of this.</p>
+
+<h2>3. No network requests of its own</h2>
+<p>The extension's own pages and background code are forbidden by their Content Security Policy from connecting to any
+server (<code>connect-src 'none'</code>), and the package contains no remote code. Our automated tests check this on
+every build: they run the extension in a browser whose every outbound request is recorded, and require that the
+extension caused none.</p>
+
+<h2>4. What the extension does on the sites you allow</h2>
+<ul>
+  <li><strong>Header rules</strong> are applied by the browser's built-in rule engine (declarativeNetRequest) to
+      requests your pages make anyway. The extension does not read the requests or their contents.</li>
+  <li><strong>Mocks</strong>: while the active profile contains a mock, a small script from the extension's package
+      runs on the sites you allowed and answers matching <code>fetch()</code> and XMLHttpRequest calls with the
+      response you wrote. Any request that is not mocked goes to the network untouched. The script only sees the
+      address and method of a request the page itself makes, on your device, and never stores or sends them.</li>
+  <li>The extension works <strong>only on sites you allow</strong>: one at a time, or all sites if you choose "Allow
+      on all sites". You can remove access at any time in the extension's settings.</li>
+</ul>
+
+<h2>5. Permissions</h2>
+<ul>
+  <li><strong>declarativeNetRequestWithHostAccess</strong> — to add, change or remove request and response headers
+      with the browser's built-in rule engine.</li>
+  <li><strong>storage</strong> — to save your profiles on this device.</li>
+  <li><strong>scripting</strong> — to run the extension's own mock script on the sites you allowed, only while a
+      profile with a mock is on.</li>
+  <li><strong>activeTab</strong> — when you click the toolbar button, to read the current tab's address so the popup
+      can offer "Allow on this site".</li>
+  <li><strong>Access to sites (optional)</strong> — never granted at install; you grant each site yourself, or all
+      sites if you choose.</li>
+</ul>
+
+<h2>6. Import and export</h2>
+<p>Importing reads a file you choose, on your device. Exporting creates a file your browser saves where you tell it
+to. Neither sends anything anywhere.</p>
+
+<h2>7. Children</h2>
+<p>The extension is a developer tool, is not directed at children and collects no data from anyone.</p>
+
+<h2>8. Data security &amp; retention</h2>
+<p>Because we don't collect or store your data on any server, there is nothing for us to breach, sell or retain. Your
+profiles remain in your browser until you delete them or remove the extension.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If a future version ever changes what is described here, this policy will be updated <strong>before</strong> that
+version is published, with a new "Last updated" date.</p>
+
+<h2>10. Contact</h2>
+<p>Questions? Email <a href="mailto:uamurtaza.apps@gmail.com">uamurtaza.apps@gmail.com</a>.</p>
+</main>
+<footer class="site">
+  <div class="doc">
+    <span>&#169; 2026 Forgeline &#183; Uzair Ali Murtaza &#183; Lahore, Pakistan</span>
+    <a href="../../">Home</a>
+  </div>
+</footer>
+<script>
+(function () {
+  var btn = document.querySelector(".theme-toggle");
+  btn.addEventListener("click", function () {
+    var next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+})();
+</script>
+</body>
+</html>
