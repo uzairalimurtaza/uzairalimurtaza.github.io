@@ -29,7 +29,7 @@
 </header>
 <main class="doc">
 <h1>Privacy Policy — Candela</h1>
-<p class="muted">Last updated: 15 September 2026</p>
+<p class="muted">Last updated: 5 October 2026</p>
 
 <p>This Privacy Policy explains how the <strong>Candela</strong> Android light meter
 (package <code>com.uzairalimurtaza.candela</code>, "the app", "we"), published under the
@@ -49,8 +49,10 @@ response time, calibration offset, exposure preset, theme and language) are stor
 on your device.</p>
 
 <h2>3. Advertising &mdash; none in this version</h2>
-<p>This version of Candela shows <strong>no ads</strong> and requests none. The advertising
-and in-app purchase libraries it is built with are inactive, and the app collects
+<p>This version of Candela shows <strong>no ads</strong> and requests none. The in-app
+purchase library has been <strong>removed from the app entirely</strong> — Candela sells
+nothing. The Google advertising library is still bundled but is switched off and never
+starts: its start-up component is removed from the app, and no ad code runs. The app collects
 <strong>no personal data at all</strong>.</p>
 <p>If a future update introduces advertising (Google AdMob), this policy will be updated
 <strong>first</strong>, with full disclosure of the data involved, and users in the EEA/UK
@@ -60,9 +62,14 @@ will be asked for consent before any ads are served.</p>
 <ul>
   <li><strong>No runtime permissions.</strong> The light sensor needs none, and the app never
       asks for camera, microphone, location, contacts or storage access.</li>
-  <li><strong>Internet / network state</strong> &mdash; declared by the libraries the app is
-      built with and not used by this version; the app itself makes no network requests. The
-      privacy policy link in Settings opens in your device's browser, outside the app.</li>
+  <li><strong>No internet access.</strong> From version 1.0.1 the app no longer declares the
+      internet or network-state permissions at all, so it cannot make a network request even
+      in principle. The privacy policy link in Settings is handed to your device's browser,
+      which opens it outside the app.</li>
+  <li><strong>One automatic internal entry.</strong> Android adds a private permission named
+      <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code> so the app's own components can
+      message each other safely. It is the only entry left in Candela's permission list and it
+      gives no access to your data, your hardware or the network.</li>
 </ul>
 
 <h2>5. Ratings</h2>
