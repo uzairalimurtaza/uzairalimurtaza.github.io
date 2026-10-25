@@ -19,12 +19,12 @@
   "name": "Sound Meter",
   "operatingSystem": "Android",
   "applicationCategory": "UtilitiesApplication",
-  "softwareVersion": "1.0.1",
+  "softwareVersion": "1.4.0",
   "author": { "@type": "Organization", "name": "Forgeline" },
   "url": "https://uzairalimurtaza.github.io/soundmeter/",
   "installUrl": "https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "description": "A free Android sound level meter. It measures ambient loudness with the phone microphone and shows an approximate sound pressure level in decibels (dB), on a gauge covering 30 to 130 dB. Audio is processed on-device in real time and never recorded, stored, or uploaded."
+  "description": "A free Android sound level meter. It measures ambient loudness with the phone microphone and shows an approximate sound pressure level in decibels (dB), on a gauge covering 30 to 130 dB. The level is calculated on the device in real time. Audio is recorded only if the user turns on the optional audio clip (off by default); the clip stays on the phone and is never uploaded."
 }
 </script>
 <script>
@@ -63,7 +63,8 @@ no ads in the current version, and requires no account.</p>
 <dl class="facts">
   <dt>Platform</dt><dd>Android</dd>
   <dt>Price</dt><dd>Free; no ads in the current version</dd>
-  <dt>Current version</dt><dd>1.0.1</dd>
+  <dt>Current version</dt><dd>1.4.0</dd>
+  <dt>Languages</dt><dd>16: English, Arabic, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Thai, Turkish and Urdu</dd>
   <dt>Package name</dt><dd>com.uzairalimurtaza.soundmeter</dd>
   <dt>Developer</dt><dd>Forgeline</dd>
   <dt>Get it</dt><dd><a href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">Sound Meter on Google Play</a></dd>
@@ -93,19 +94,33 @@ the app is open and measuring; the meter runs only while you are using it.</p>
   <li><strong>Rolling trend chart</strong> of the level over the recent past.</li>
   <li><strong>Session statistics</strong>: minimum, maximum, and average level for the
       current measuring session.</li>
-  <li><strong>A, C, and Z weighting toggles.</strong> These are implemented as a
-      documented broadband approximation using fixed offsets, not as per-frequency
-      IEC&nbsp;61672 filters. They shift the reading in the direction the standard
-      weightings would for typical broadband noise, but they are not filter-accurate.</li>
+  <li><strong>A, C, and Z weighting.</strong> A and C apply the IEC&nbsp;61672
+      frequency-weighting curves as digital filters on the microphone signal; Z is
+      unweighted. The phone's microphone itself is not calibrated, so weighted readings
+      are still estimates.</li>
   <li><strong>Fast and Slow time response.</strong> Genuine exponential time-averaging
       with the conventional sound-level-meter time constants: 125&nbsp;ms (Fast) and
       1&nbsp;s (Slow).</li>
-  <li><strong>Manual calibration slider</strong>, adjustable by ±15 dB, so readings can
+  <li><strong>Manual calibration slider</strong>, adjustable by ±20 dB, so readings can
       be aligned against a known reference level.</li>
   <li><strong>Reference guide</strong> of 19 everyday sounds (for example a quiet room,
       normal conversation, city traffic) with their typical levels, for context.</li>
   <li><strong>Hearing-safety advisory</strong> shown when the level is above 85 dB,
       based on WHO and NIOSH guidance on noise exposure.</li>
+  <li><strong>Saved sessions</strong> with the full level graph, notes and place, plus
+      CSV export through your phone's share sheet.</li>
+  <li><strong>Optional audio clip</strong> with each session: off by default, saved only
+      on your phone, and deleted when you delete the session.</li>
+  <li><strong>Noise alert</strong> when the level passes a threshold you set (it works
+      while the app is open and the screen is on), and a full-screen classroom traffic
+      light.</li>
+  <li><strong>Frequency analyzer</strong> and a noise-dose estimate (an estimate, not a
+      certified dosimeter).</li>
+  <li><strong>Photo stamped with the dB reading</strong>, kept in the app or saved to your
+      gallery (Android 10 and newer); a shareable result card; a home-screen widget; and a
+      Quick Settings tile that opens the meter.</li>
+  <li><strong>Pause and resume</strong>, keep the screen on, upside-down mode (microphone
+      toward the sound), left-handed controls, and needle or digital gauge styles.</li>
   <li><strong>Dark mode</strong>, and full offline operation. No account, and no ads in
       the current version.</li>
 </ul>
@@ -120,17 +135,21 @@ sound level meter reading taken in the same place — improves the consistency o
 readings on your particular device.</p>
 
 <h2>Privacy</h2>
-<p>Audio is processed on the device, in real time, for one purpose: computing the
-current sound level. It is <strong>never recorded, stored, or uploaded</strong>. The app
-collects no data of any kind — no account, no analytics, no tracking. The full policy is
-published at
+<p>The sound level is calculated on the device, in real time. <strong>Nothing is
+recorded unless you switch on the optional audio clip</strong>, which is off by default; a
+clip is kept only on your phone with its session, is never uploaded, and is deleted when
+you delete the session. Photos with the dB reading are saved on your phone; a photo you
+save to the gallery is then handled like your other pictures. The app's own copies of clips
+and photos are left out of Android backups. The app itself sends nothing off the phone; you
+can share a CSV file or a photo yourself. The app collects no data of
+any kind — no account, no analytics, no tracking. The full policy is published at
 <a href="https://uzairalimurtaza.github.io/soundmeter-privacy/">uzairalimurtaza.github.io/soundmeter-privacy</a>.</p>
 
 <h2>Get the app</h2>
 <p>Sound Meter is available on Google Play:
 <a href="https://play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter">play.google.com/store/apps/details?id=com.uzairalimurtaza.soundmeter</a>.</p>
 <p>Questions about the app can be sent to
-<a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a>.</p>
+<a href="mailto:uamurtaza.apps@gmail.com">uamurtaza.apps@gmail.com</a>.</p>
 </main>
 
 <footer class="site">
