@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sound Meter — Privacy Policy</title>
-<meta name="description" content="Privacy policy for the Sound Meter Android app. No ads, no data collection; audio is processed on-device and never recorded.">
+<meta name="description" content="Privacy policy for the Sound Meter Android app. No ads, no data collection. Sound is measured on your device; the optional audio clip is off by default, stays on your phone and is never uploaded.">
 <link rel="canonical" href="https://uzairalimurtaza.github.io/soundmeter-privacy/">
 <link rel="icon" href="https://uzairalimurtaza.github.io/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="https://uzairalimurtaza.github.io/apple-touch-icon.png">
@@ -29,24 +29,57 @@
 </header>
 <main class="doc">
 <h1>Privacy Policy — Sound Meter</h1>
-<p class="muted">Last updated: 13 July 2026</p>
+<p class="muted">Last updated: 25 October 2026</p>
 
 <p>This Privacy Policy explains how the <strong>Sound Meter</strong> Android app
 ("the app", "we") handles information. By using the app you agree to this policy.</p>
 
-<h2>1. The microphone &mdash; we never record audio</h2>
-<p>Sound Meter uses your device microphone for one purpose only: to measure the
-ambient <strong>sound level (loudness)</strong> in real time and show it to you as a
-decibel number. The audio signal is processed <strong>on your device, in memory, in the
-moment</strong>. We do <strong>not</strong> record it, we do <strong>not</strong> save it
-to a file, and we do <strong>not</strong> upload or transmit it anywhere. Nothing you
-measure ever leaves your phone.</p>
-<p>Microphone access is used only to estimate ambient sound level. Audio is processed locally on your device in real time. We do not store, transmit, upload, or share audio recordings.</p>
+<h2>1. The microphone &mdash; measuring, and the optional audio clip</h2>
+<p>Sound Meter uses your device microphone to measure the ambient <strong>sound level (loudness)</strong>
+in real time. This is processed <strong>on your device, in memory</strong>.</p>
+<p><strong>Optional audio clip (off by default).</strong> If you switch it on, the app records the sound
+while you measure and saves it as an audio file <strong>on your phone only</strong>, attached to that
+saved session, so you can replay it. You can delete it at any time (deleting the session deletes the clip).
+The app never uploads recordings, and they are left out of Android backup and out of transfers to a new
+phone. A clip leaves your phone only if you choose to share one yourself: in a saved session, tap Share, then
+&ldquo;Share clip&rdquo;, and pick an app in your phone's share sheet. The share sheet's temporary copy sits in the
+app's cache, which is cleared at your next share, and Android never backs up the cache.</p>
+
+<h2>1a. Camera &mdash; optional photo with the dB reading</h2>
+<p>Only if you open the camera feature does the app ask for camera access. A photo you take is stamped with
+the reading. The app never uploads photos.</p>
+<p><strong>How long a photo is kept.</strong> A photo is kept in the app only while it is on the photo
+screen. Tapping Retake or leaving the screen deletes it, even if you shared it or saved it to the gallery.
+Only the copies you chose to share or save remain, plus the share sheet's temporary copy in the app's
+cache, which is cleared at your next share; Android never backs up the cache.</p>
+<p><strong>Share.</strong> The app passes a photo to another app only when you tap Share and pick that app
+in your phone's share sheet.</p>
+<p><strong>Save to gallery (Android 10 and newer).</strong> A photo is copied to your phone's gallery
+(Pictures/Sound Meter) only if you tap &ldquo;Save to gallery&rdquo;. That copy then lives in your phone's
+shared storage, outside the app, where you manage it like any other picture (your gallery or backup app
+may treat it like your other photos); the app never uploads it. It stays there until you delete it, even if
+you uninstall the app. This uses Android's media store and needs no storage permission; on older Android
+versions the button is not shown.</p>
+
+<h2>1b. Saved sessions</h2>
+<p>Measurement history (levels, times, your notes and place names) is stored on your phone, and the app
+never uploads it. You can share a session as an image of its result card, a short text summary or a CSV
+file of its data, through your phone's share sheet, only when you tap Share. We never receive it. If Android backup is on, your sessions can be part of it (Section 1c).</p>
+
+<h2>1c. Android backup</h2>
+<p>The app itself never uploads anything. If you have Android backup turned on, Android's own backup to
+your Google account may include this app's data, such as your settings and saved sessions, so you get them
+back on a new phone. The same data can be copied when you move to a new phone with Android's transfer
+tool. Audio clips and photos are never part of this backup or transfer. You control backup in your
+phone's settings, and we cannot see your backup.</p>
 
 <h2>2. We do not collect personal data</h2>
 <p>The app has no account, no sign-up, and no login. We do not ask for your name, email,
-phone number, contacts, photos, or location. Your settings (theme, calibration offset)
-are stored only on your device.</p>
+phone number, contacts or location. The app does not read your photo gallery: it takes a photo only when you
+use its camera screen, and it adds a photo to your gallery only when you tap &ldquo;Save to gallery&rdquo;
+(Section 1a). Your settings (such as theme and calibration
+offset) and the last reading shown by the home-screen widget are stored on your phone, and the app never
+uploads them (for Android backup, see Section 1c).</p>
 
 <h2>3. Advertising &mdash; none in this version</h2>
 <p>This version of Sound Meter shows <strong>no ads</strong> and includes <strong>no active
@@ -58,7 +91,9 @@ EEA/UK) a consent request will be shown before any ads are served.</p>
 
 <h2>4. Permissions we request</h2>
 <ul>
-  <li><strong>Microphone (RECORD_AUDIO)</strong> &mdash; required to measure sound level, as described in Section 1. Audio is never stored or sent.</li>
+  <li><strong>Microphone (RECORD_AUDIO)</strong> &mdash; required to measure sound level; audio is stored only if you turn on the optional audio clip, and the app stores it only on your phone (Section 1).</li>
+  <li><strong>Camera (CAMERA)</strong> &mdash; requested only when you open the photo feature (Section 1a).</li>
+  <li><strong>Vibration</strong> &mdash; for the optional noise alert.</li>
   <li><strong>Internet / Network state</strong> &mdash; not used by this version (reserved for a
       future ads update); the app itself makes no network requests. The privacy policy link in
       Settings opens in your device's browser, outside the app.</li>
@@ -72,14 +107,19 @@ children. This version shows no advertising.</p>
 
 <h2>6. Data security &amp; retention</h2>
 <p>Because we don't collect or store your data on any server, there is nothing for us to
-breach, sell, or retain. On-device settings remain until you clear the app's data or uninstall.</p>
+breach, sell, or retain. On your phone, settings stay until you change them, clear the app's data or
+uninstall the app. Saved sessions and their audio clips stay until you delete them (deleting a session
+deletes its clip), clear the app's data or uninstall the app. A photo stays in the app only while it is on
+the photo screen; a copy you saved to the gallery stays there until you delete it, even after you uninstall
+the app (Section 1a). An Android backup
+copy (Section 1c) is kept by Android in your Google account.</p>
 
 <h2>7. Changes to this policy</h2>
 <p>We may update this policy as the app evolves. Material changes will be reflected here with
 a new "Last updated" date.</p>
 
 <h2>8. Contact</h2>
-<p>Questions? Email <a href="mailto:uzairalimurtaza@gmail.com">uzairalimurtaza@gmail.com</a>.</p>
+<p>Questions? Email <a href="mailto:uamurtaza.apps@gmail.com">uamurtaza.apps@gmail.com</a>.</p>
 
 <p class="muted">Sound Meter is a measurement aid. Phone microphones are not laboratory
 instruments; readings are estimates and should not be relied upon for professional, medical,
