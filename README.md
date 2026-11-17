@@ -1,6 +1,6 @@
 # uzairalimurtaza.github.io
 
-Forgeline studio site — the developer portfolio of Uzair Ali Murtaza (Forgeline on Google Play), Lahore, Pakistan. "Spec sheet" design: shared `styles.css`, WebP assets in `assets/`.
+Ardesse Apps site (formerly Forgeline): app pages and privacy policies. "Spec sheet" design: shared `styles.css`, WebP assets in `assets/`.
 
 Hosts:
 - Landing page (`/` — studio portfolio: Sound Meter + Tasbih Counter, principles, contact)
@@ -63,5 +63,5 @@ git push -u origin main
 
 - **Privacy policy source of truth** is `apps/04-sound-meter/PRIVACY_POLICY.html` in the apps workspace. The copy at `soundmeter-privacy/index.html` is derived — resync it whenever the policy changes (comment at the top of that file says the same).
 - **When Sound Meter goes live on Play**, replace the "Coming soon to Google Play" badge in `index.html` with a real Play Store link.
-- **Custom domain (later, optional):** add a `CNAME` file at the repo root containing just the domain (e.g. `uzair.dev`), then configure DNS per GitHub Pages docs. Not needed for AdMob verification — the github.io URL works.
+- **Custom domain (later, optional):** add a `CNAME` file at the repo root containing just the domain (e.g. `apps.example.com`), then configure DNS per GitHub Pages docs. Not needed for AdMob verification — the github.io URL works.
 - **AdMob context:** this site + `app-ads.txt` + a live Play listing are the Week-1/Week-5 evidence items in `apps/04-sound-meter/ADMOB_REJECTION_RECOVERY_2026-06-10.md`. The Play Console listing's "Website" field must point to `https://uzairalimurtaza.github.io`.
